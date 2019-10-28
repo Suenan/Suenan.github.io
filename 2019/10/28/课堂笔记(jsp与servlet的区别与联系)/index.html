@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hexo</title>
+  <title>课堂笔记1028 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="jsp和servlet的区别与联系jsp和servlet的区别和联系： JSP的本质就是Servlet，JVM只能识别java的类，不能识别JSP的代码,Web容器将JSP的代码编译成JVM能够识别的java类 jsp表现于页面显示,servlet是逻辑控制. Servlet中没有内置对象，Jsp中的内置对象都是必须通过HttpServletRequest对象，HttpServletRespons">
+<meta property="og:type" content="article">
+<meta property="og:title" content="课堂笔记1028">
+<meta property="og:url" content="http://yoursite.com/2019/10/28/课堂笔记(jsp与servlet的区别与联系)/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="jsp和servlet的区别与联系jsp和servlet的区别和联系： JSP的本质就是Servlet，JVM只能识别java的类，不能识别JSP的代码,Web容器将JSP的代码编译成JVM能够识别的java类 jsp表现于页面显示,servlet是逻辑控制. Servlet中没有内置对象，Jsp中的内置对象都是必须通过HttpServletRequest对象，HttpServletRespons">
 <meta property="og:locale" content="en">
+<meta property="og:image" content="https://i.loli.net/2019/10/28/RusCTl3NH6V5kth.png">
+<meta property="og:updated_time" content="2019-10-28T10:22:53.156Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="课堂笔记1028">
+<meta name="twitter:description" content="jsp和servlet的区别与联系jsp和servlet的区别和联系： JSP的本质就是Servlet，JVM只能识别java的类，不能识别JSP的代码,Web容器将JSP的代码编译成JVM能够识别的java类 jsp表现于页面显示,servlet是逻辑控制. Servlet中没有内置对象，Jsp中的内置对象都是必须通过HttpServletRequest对象，HttpServletRespons">
+<meta name="twitter:image" content="https://i.loli.net/2019/10/28/RusCTl3NH6V5kth.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,157 +156,186 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-课堂笔记(jsp与servlet的区别与联系)" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      课堂笔记1028
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2019" class="archive-year">2019</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/28/课堂笔记(jsp与servlet的区别与联系)/" class="archive-article-date">
+
+        
+        <a href="/2019/10/28/课堂笔记(jsp与servlet的区别与联系)/" class="archive-article-date">
   	<time datetime="2019-10-28T10:14:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/28/课堂笔记(jsp与servlet的区别与联系)/">课堂笔记1028</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="jsp和servlet的区别与联系"><a href="#jsp和servlet的区别与联系" class="headerlink" title="jsp和servlet的区别与联系"></a>jsp和servlet的区别与联系</h1><h3 id="jsp和servlet的区别和联系："><a href="#jsp和servlet的区别和联系：" class="headerlink" title="jsp和servlet的区别和联系："></a>jsp和servlet的区别和联系：</h3><ol>
+<li>JSP的本质就是Servlet，JVM只能识别java的类，不能识别JSP的代码,Web容器将JSP的代码编译成JVM能够识别的java类</li>
+<li>jsp表现于页面显示,servlet是逻辑控制.</li>
+<li>Servlet中<strong><em>没有内置对象</em></strong>，Jsp中的内置对象都是必须通过HttpServletRequest对象，HttpServletResponse对象以及HttpServlet对象得到.<br>Jsp是Servlet的一种简化，使用Jsp只需要完成程序员需要输出到客户端的内容，Jsp中的Java脚本如何镶嵌到一个类中，由Jsp容器完成。<br>而<strong><em>Servlet则是个完整的Java类</em></strong>，这个类的<strong><em>Service方法</em></strong>用于生成对客户端的响应。</li>
+</ol>
+<h3 id="联系："><a href="#联系：" class="headerlink" title="联系："></a>联系：</h3><p>JSP是Servlet技术的扩展，本质上就是Servlet的简易方式。JSP编译后是<strong><em>“类servlet”</em></strong>。<br>Servlet和JSP最主要的不同点在于：<br>Servlet的<strong><em>应用逻辑</em></strong>是在<strong><em>Java文件</em></strong>中，并且完全从表示层中的HTML里分离开来。<br>而JSP的情况是<strong><em>Java和HTML</em></strong>可以组合成一个扩展名为<strong><em>.jsp</em></strong>的文件。<br>JSP侧重于<strong><em>视图</em></strong>，Servlet主要用于<strong><em>控制逻辑Servlet更多的是类似于一个Controller，用来做控制。</em></strong> </p>
+<p>理解以下三点即可：</p>
+<ul>
+<li>不同之处在哪？<ol>
+<li>Servlet在Java代码中通过HttpServletResponse对象动态输出HTML内容</li>
+<li>JSP在静态HTML内容中嵌入Java代码，Java代码被动态执行后生成HTML内容</li>
+</ol>
+</li>
+<li>各自的特点<ol>
+<li>Servlet能够很好地组织业务逻辑代码，但是在Java源文件中通过字符串拼接的方式生成动态HTML内容会导致代码维护困难、可读性差<ol start="2">
+<li>JSP虽然规避了Servlet在生成HTML内容方面的劣势，但是在HTML中混入大量、复杂的业务逻辑同样也是不可取的</li>
+</ol>
+</li>
+</ol>
+</li>
+<li>通过MVC双剑合璧<br>既然JSP和Servlet都有自身的适用环境，那么能否扬长避短，让它们发挥各自的优势呢？答案是肯定的——MVC(Model-View-Controller)模式非常适合解决这一问题。<br>MVC模式（Model-View-Controller）是软件工程中的一种软件架构模式，把软件系统分为三个基本部分：模型（Model）、视图（View）和控制器（Controller）：<ul>
+<li>Controller——负责转发请求，对请求进行处理</li>
+<li>View——负责界面显示</li>
+<li>Model——业务功能编写（例如算法实现）、数据库设计以及数据存取操作实现<br>在JSP/Servlet开发的软件系统中，这三个部分的描述如下所示:<br><img src="https://i.loli.net/2019/10/28/RusCTl3NH6V5kth.png" alt="在这里插入图片描述"></li>
+</ul>
+</li>
+</ul>
+<pre><code>1. Web浏览器发送HTTP请求到服务端，被Controller(Servlet)获取并进行处理（例如参数解析、请求转发）
+2. Controller(Servlet)调用核心业务逻辑——Model部分，获得结果
+3. Controller(Servlet)将逻辑处理结果交给View（JSP），动态输出HTML内容
+4. 动态生成的HTML内容返回到浏览器显示</code></pre><p>MVC模式在Web开发中的好处是非常明显，它规避了JSP与Servlet各自的短板，Servlet只负责业务逻辑而不会通过out.append()动态生成HTML代码；JSP中也不会充斥着大量的业务代码。这大大提高了代码的可读性和可维护性。</p>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2019/10/28/课堂笔记(jsp与servlet的区别与联系)/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-w">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/24/课堂笔记1022/" class="archive-article-date">
-  	<time datetime="2019-10-24T03:03:44.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-24</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/24/课堂笔记1022/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">课堂笔记1022</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/24/课堂笔记1022/">课堂笔记1022</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/22/课堂笔记1021/" class="archive-article-date">
-  	<time datetime="2019-10-22T05:38:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/22/课堂笔记1021/">课堂笔记1021</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/第一张/" class="archive-article-date">
-  	<time datetime="2019-10-10T07:46:09.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/第一张/">第一张</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2019/10/10/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-10T07:01:08.350Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-10</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2019/10/10/hello-world/">Hello World</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
 
 
           </div>
@@ -323,8 +358,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
