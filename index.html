@@ -152,19 +152,131 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-课堂笔记(jsp与servlet的区别与联系)" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+    <article id="post-课堂笔记-关于JSP" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/28/课堂笔记(jsp与servlet的区别与联系)/">课堂笔记1028</a>
+      <a class="article-title" href="/2019/10/29/课堂笔记-关于JSP/">课堂笔记-关于JSP</a>
     </h1>
   
 
         
-        <a href="/2019/10/28/课堂笔记(jsp与servlet的区别与联系)/" class="archive-article-date">
+        <a href="/2019/10/29/课堂笔记-关于JSP/" class="archive-article-date">
+  	<time datetime="2019-10-29T00:02:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-29</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、JSP九大内置对象"><a href="#一、JSP九大内置对象" class="headerlink" title="一、JSP九大内置对象"></a>一、JSP九大内置对象</h2><ul>
+<li><p>（一）<strong>Request：</strong> 客户端与服务器的一次请求中封装了用户提交的信息（包裹），该对象可以设置请求转<br>发request.getRequestDispatcher(String URL).forward(request,response)，是服务器行为，是一次请求，<br>所以页面的URL为原始请求处理的响应页面的URL（不是最终的处理请求的响应页面，因为客户端只请求<br>一次）。</p>
+</li>
+<li><p>（二）<strong>Response：</strong> 对客户的请求做出的响应，向客户端发送数据，该对象可以设置重定向<br>response.sendRedirect(String URL)，是客户端行为，是两次请求，所以页面的URL为二次请求处理的响<br>应页面的URL。</p>
+</li>
+<li><p>（三）<strong>Session：：</strong> 该对象是客户端与服务器的一次会话，只要不关闭服务器的所有页面（离开这个服务<br>器），就只视为一次会话。Session在第一个JSP页面被装载时自动创建，完成会话期管理。当一个客户<br>首次访问服务器上的一个JSP页面时，JSP 引擎产生一个Session对象，同时分配一个String类型的ID号，<br>JSP引擎同时将这换个ID号发送到客户端，存放在Cookie（要求服务器启用Cookie权限）中，这样<br>Session对象，直到客户关闭浏览器后，服务器端该客户的Session对象才取消，并且和客户的会话对应关<br>系消失。当客户重新打开浏览器再连接到该服务器时，服务器为该客户再重新创建一个新的Session对象<br>拥有新的ID号。常用方法为String getId()获取ID号以及Boolean isNew()判断是否是一个新的客户。<br>Session可以理解为线程私有的。</p>
+</li>
+<li><p>（四）<strong>Application：</strong>  服务器启动时产生，共享性。</p>
+</li>
+<li><p>（五）<strong>Out：Out</strong> 对象本质是一个输出流，用来向客户端输出数据。Out对象用于各种数据的输出。常用<br>方法为：</p>
+<p>  <strong>out.print()：</strong> 输出各种类型数据。</p>
+<p>  <strong>out.newLine()：</strong> 输出一个换行符。</p>
+<p>  <strong>out.close()：</strong> 关闭流。</p>
+</li>
+<li><p>（六）<strong>Config：</strong> 配置对象。</p>
+</li>
+<li><p>（七）<strong>Page：</strong> 页面。</p>
+</li>
+<li><p>（八）<strong>PageContext：</strong> 页面应用上下文环境。可通过该对象获取依赖于页面上下文环境的<strong>Node</strong>。</p>
+</li>
+<li><p>（九）<strong>Exception：</strong> 只有在处理异常的网页中可以直接访问<strong>exception</strong> 隐式对象。</p>
+</li>
+</ul>
+<h1 id="二、JSP七种传参方式"><a href="#二、JSP七种传参方式" class="headerlink" title="二、JSP七种传参方式"></a>二、JSP七种传参方式</h1><ul>
+<li><p>（一）<strong>JavaBean：&lt;jsp:useBean id=”XXX” class=”JavaBean的全限定名(page+calssName)”<br>scope=”session” /&gt;</strong></p>
+</li>
+<li><p>（二）<strong>Session：session.setAttribute(String key,Object value)/seesion.getAttribute(String key)</strong></p>
+</li>
+<li><p>（三）<strong>Application:application.setAttribute(String key,Object value)/application.getAttribute(String key)</strong></p>
+</li>
+<li><p>（四）<strong>Request:request.setParater(String key,String value)/request.getParater(String key)<br>request.setAttribute(String key,Object value)/request.getAttribute(String key)</strong></p>
+</li>
+<li><p>（五）<strong>JSP动作指令：&lt;jsp:forward/redirect page=”XXX.jsp”&gt; &lt;jsp:param name=”key-x” value=”value-x”<br>/&gt; &lt;jsp:param name=”key-y” value=”value-y” /&gt; &lt;/jsp:forward/redirect&gt;</strong></p>
+</li>
+<li><p>（六）<strong>Form表单：</strong></p>
+<p>  <button><strong>用户操作</strong> </button></p>
+</li>
+<li><p>（七）<strong>URL传参：</strong> URL.jsp?参数1 的key=参数1的value&amp; 参数n的key=参数n 的value</p>
+</li>
+</ul>
+<h1 id="三、JSP四个作用域"><a href="#三、JSP四个作用域" class="headerlink" title="三、JSP四个作用域"></a>三、JSP四个作用域</h1><ul>
+<li><p>（一）<strong>Application：</strong> 共享、全局、服务器启动时产生，重启服务器销毁。可以包含很多个session。</p>
+</li>
+<li><p>（二）<strong>8Session：</strong> 会话。隔离。生命周期是从用户发起链接服务器至彻底与服务器完全断开。可以包含很<br>多个request。所谓当前会话，就是指从用户打开浏览器开始，到用户关闭浏览器这中间的过程。</p>
+</li>
+<li><p>（三）<strong>Request：</strong> 有效域是当前请求周期。所谓请求周期，就是指从http请求发起，到服务器处理结束，<br>返回响应的整个过程。在这个过程中可能使用forward的方式跳转了多个jsp页面，在这些页面里你都可以<br>使用这个变量。</p>
+</li>
+<li><p>（四）<strong>Page：</strong> 有效域是当前页面，可以把参数放入PageContext中，只有跳转就失效。</p>
+</li>
+</ul>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/29/课堂笔记-关于JSP/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-课堂笔记-jsp与servlet的区别与联系" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/28/课堂笔记-jsp与servlet的区别与联系/">课堂笔记1028</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/28/课堂笔记-jsp与servlet的区别与联系/" class="archive-article-date">
   	<time datetime="2019-10-28T10:14:57.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-28</time>
 </a>
         
@@ -215,7 +327,7 @@
 
       
         <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/28/课堂笔记(jsp与servlet的区别与联系)/">展开全文 >></a>
+          <a class="article-more-a" href="/2019/10/28/课堂笔记-jsp与servlet的区别与联系/">展开全文 >></a>
         </p>
       
 
